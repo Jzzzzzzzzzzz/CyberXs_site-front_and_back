@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href = "{% static 'css/init.css' %}"  >
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="{% static 'css/css.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;500;600;800;900&display=swap" rel="stylesheet">
+    <title>{% block title %}CyberX{% endblock %}</title>
+</head>
+<body>
+{%block content%}
+<div class="container">
+    <header class="header">
+        <div class="wrapper">
+            <div class="header_wrapper">
+                <div class="header_logo">
+                    <a href="index.html" class="header_logo-link">
+                    <img src="./image/Cyber X UP.svg" alt="CyberX" class="header_logo-pic">
+                </a>
+            </div>
+        <nav class="header-nav">
+            <ul class="header_list">
+                <li class="header_item">
+                    <a href="index.html" class="header_link">Вход</a>
+                </li>
+                <li class="header_item">
+                    <a href="index.html" class="header_link"> Регистрация</a>
+                </li>
+                <li class="header_item1">
+                     <img src="./image/Decoration.svg">
+                </li>
+            </ul>
+        </nav>
+            </div>
+        </div>
+    </header>
+<main class = "main">
+    <section class="intro">
+        <div class="wrapper">
+            <div class="img-con">
+                <img src="./image/img.svg"  class="img_atr">
+            </div>
+        </div>
+
+<div class="wrapper" >
+    <h1 class="content"> Совершенно новая <br> нейросеть для <br> определения<br> заинтерисованости</h1>
+        <p class="content-p">Попробуйте сейчас бесплатно! </p>
+            <a href="index.html"">
+                <img class="img-Rectangle " src="./image/rectangle.svg"  class="img_atr">
+            </a>
+                <p class="content-big">
+                    Kirill Denisovich
+                </p>
+</div>
+    </section>
+
+    <section class="best">
+        <div class="wrapper">
+             <ul class="cont">
+                        <div class="cont">
+                            <li class="p-cont">
+                                100%
+                            </li>
+                                <li class="p-cont-0">
+                                   1-й
+                                </li>
+                                <li class="p-cont-1">
+                                    99%
+                                </li>
+                        </ul>
+                            <ul class="content-continue">
+                                <li class="par-cont">
+                                Бесплатное <br> использование
+                                </li>
+                                <li class="par-cont-0">
+                                   Год работы! внеси<br> свой вклад в<br> развитие нейросети
+                                </li>
+                                <li class="par-cont-1">
+                                   Пользователей нам<br> доверяют
+                                </li>
+                            </ul>
+                              <div class="p-goal">
+                                <p>Наши Задачи</p>
+                                  <div class="border_all">
+                                      <div class="border">
+                                          <p class="extension">Создать</p>
+                                          <p class="expansion-inside">Создать <br> систему <br>обработки и<br> классификации<br> видео.</p>
+                                          <img class="expansion-inside-img" src="./image/Vector.svg">
+                                          <img class="expansion-inside-img0" src="./image/Vector.svg">
+                                          <img class="expansion-inside-img1" src="./image/radio_icon.svg">
+                                      </div>
+                                   <div class="border0">
+                                        <img class="expansion-inside0-img1" src="./image/matt.png">
+                                  </div>
+                                   <div class="border1">
+                                        <p class="extension">Интерграция</p>
+                                          <p class="expansion-inside">Интегрировать разработанную систему в платформу для автоматизации анализа видеоданных</p>
+                                          <img class="expansion-inside-img" src="./image/Vector.svg">
+                                          <img class="expansionb1-inside-img" src="./image/Vector.svg">
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+    </section>
+    <section class="page">
+        <div class="wrapper">
+            <div class="possibilities-class">
+                <p class="possibilities">Возможности</p>
+            </div>
+            <div class="elements-class">
+                <div class="element1">
+                    <div class="element1-1">
+                        <p class="p-element1-1">Нейросеть может</p>
+                    </div>
+                    <div class="element1-2">
+                        <p class="p-element1-2">Анализировать публичные посты, комментарии и сообщения пользователей в социальных медиа, определять их интересы и предпочтения</p>
+                    </div>
+                    <div class="img-element1-class">
+                        <img class="img-element1" src=" ./image/why.svg">
+                    </div>
+                </div>
+                <div class="element2">
+                    <div class="element2-1">
+                        <p class="p-element2-1">Анализ статей</p>
+                    </div>
+                    <div class="element2-2">
+                        <p class="p-element2-2">Нейросеть может анализировать тексты статей, блогов, новостей, чтобы определить частоту упоминания определенных тематик</p>
+                    </div>
+                     <div class="img-element2-class">
+                        <img class="img-element2" src=" ./image/why.svg">
+                    </div>
+                </div>
+                <div class="element3">
+                     <div class="element3-1">
+                        <p class="p-element3-1">Обработка</p>
+                    </div>
+                    <div class="element3-2">
+                        <p class="p-element3-2">Нейросеть может обрабатывать аудиозаписи, например, вебинаров, подкастов или видеоблогов</p>
+                    </div>
+                     <div class="img-element3-class">
+                        <img class="img-element3" src=" ./image/why.svg">
+                    </div>
+                </div>
+            </div>
+             <div class="elements-class-continue">
+                </div>
+                <div class="element4">
+                     <div class="element4-1">
+                        <p class="p-element4-1">Анализ визуала</p>
+                    </div>
+                    <div class="element4-2">
+                        <p class="p-element4-2">Нейросеть может анализировать изображения, фотографии и видеозаписи</p>
+                    </div>
+                      <div class="img-element4-class">
+                        <img class="img-element4" src=" ./image/why.svg">
+                    </div>
+                </div>
+                <div class="element5">
+                    <div class="element5-1">
+                        <p class="p-element5-1">Обработка данных</p>
+                    </div>
+                    <div class="element5-2">
+                        <p class="p-element5-2">Нейросеть может анализировать данные о поведении пользователей на вебинарах,мероприятиях,школах и так далее</p>
+                    </div>
+                      <div class="img-element5-class">
+                        <img class="img-element5" src=" ./image/why.svg">
+                    </div>
+
+                </div>
+                <div class="element6">
+                    <div class="element6-1">
+                        <p class="p-element6-1">Анализ эмоций</p>
+                    </div>
+                    <div class="element6-2">
+                        <p class="p-element6-2">Нейросеть может анализировать эмоции, выражаемые пользователями в социальных медиа, комментариях или отзывах</p>
+                    </div>
+                      <div class="img-element6-class">
+                        <img class="img-element6" src=" ./image/why.svg">
+                    </div>
+                </div>
+            </div>
+    </section>
+     <section class="page3">
+         <div class="wrapper">
+             <div class="stages_of_creation">
+                 <p class="style_stages_of_creation">Этапы создания</p>
+             </div>
+             <div class="star-img-style">
+                 <ul>
+                     <li><img class="star1" src="./image/star.svg"></li>
+                     <li><img class="star2" src="./image/star.svg"></li>
+                     <li><img class="star3" src="./image/star.svg"></li>
+                     <li> <img class="star4" src="./image/star.svg"></li>
+                 </ul>
+             </div>
+             <div class="border-stages_of_creation">
+                    <div class="bor">
+                       <img class="num" src="./image/1.svg">
+                    </div>
+                    <div class="bor">
+                        <img class="num" src="./image/2.svg">
+                    </div>
+
+                    <div class="bor">
+                        <img class="num" src="./image/3.svg">
+                    </div>
+
+                    <div  class="bor">
+                        <img class="num" src="./image/4.svg">
+                    </div>
+                    <div  class="bor-">
+                        <img class="gradint-bor" src="./image/gradient_bor.svg">
+                        <img class="num-grad" src="./image/5.svg">
+                    </div>
+             </div>
+         </div>
+     </section>
+    <section class="page4">
+        <div class="wrapper">
+            <div class="why-box-class">
+                <p align="center" class="why-class-style">Зачем мы нужны?</p>
+<!--                <div class="vectors">
+                    <div class="vector1">
+                        <img  src="./image/fin.svg">
+                    </div>
+                    <div  class="vector2">
+                        <img src="./image/fin.svg">
+                    </div>
+                </div>
+                <div class="vec">
+                    <div  class="vector3">
+                        <img src="./image/vec.svg">
+                    </div>
+                    <div  class="vector4">
+                        <img src="./image/vec.svg">
+                    </div>
+               </div>-->
+            </div>
+            <div class="bord">
+                <div class="bor1">
+                      <div class="done">
+                          <p class="do">Решаемая Проблема</p>
+                      </div>
+                    <div class="dev">
+                       <p class="p-dev-style">Разработка <br> интеллектуальной <br> системы анализа  <br>видеоданных с целью <br> выявления <br> заинтересованности <br> аудитории</p>
+                    </div>
+                </div>
+                <div class="bor2">
+                    <img src="./image/gra.svg">
+                    <div class="relevance">
+                        <p сlass="rel"> Актуальность </p>
+                    </div>
+                    <div class="aud">
+                        <p class="p-aud-style">
+                            Выбранной целевой <br> аудитории необходим <br >продукт проекта для <br> улучшения анализа <br> видеоданных и точного <br> выявления их <br> заинтересованности.
+                        </p>
+                        <div class="vector-style">
+                            <img src="./image/Vector.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="bor3">
+                    <div class="hypothesis">
+                        <p class="hypostyle">Гипотеза </p>
+                    </div>
+                    <div class="dat">
+                         <!--align="center"-->
+                         <p class="data-style">Разработка интеллектуальной системы анализа видеоданных позволит эффективно определить заинтересованность аудитории на основе проведенных исследований и анализа данных.</p>
+                    </div>
+                    <div class="sty">
+                        <img src="./image/!!!.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="logo-cyberx-grad">
+                <a href="index.html" class="logo-cyberx-grad-link">
+                <img src="./image/CyberXDown.svg">
+                </a>
+            </div>
+            <div class="Privacy-Policy">
+                <a href="index.html" class="privacy-link">Политика конфеденциальности</a>
+            </div>
+        </div>
+    </section>
+</main>
+</div>
+</div>
+{%endblock%}
+</body>
+</html>
