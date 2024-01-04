@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}AI{% endblock %}
+{% load static %}
+{% block content %}
+<body>
+    <main class = "main">
+        <section class="AI">
+            <div class="wrapper">
+                <div class="neural_network">
+                    <p class="p-neural_network">Нейросеть</p>
+                </div>
+                <div class="rectangle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="785" height="745" viewBox="0 0 785 745" fill="none">
+                         <path d="M0 70C0 31.3401 31.3401 0 70 0H715C753.66 0 785 31.3401 785 70V675C785 713.66 753.66 745 715 745H70C31.34 745 0 713.66 0 675V70Z" fill="#3F3F3F"/>
+                    </svg>
+                    <div class="cir">
+                        <img src="{% static 'image/circle.svg'%}">
+                    </div>
+                    <div class="arrow">
+                        <a href="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" fill="none">
+                            <path d="M125 52.0833V197.917" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M197.917 125L125 197.917L52.0835 125" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </a>
+                    </div>
+                    <div class="load-video">
+                        <p class="p-load-video">Загрузить <br> видео</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+{% endblock %}
+</html>

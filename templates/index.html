@@ -8,17 +8,17 @@
         <div class="wrapper">
             <div class="header_wrapper">
                 <div class="header_logo">
-                    <a href="index.html" class="header_logo-link">
+                    <a href="{% url 'index'%}" class="header_logo-link">
                     <img src="{% static 'image/Cyber X UP.svg' %}" alt="CyberX" class="header_logo-pic">
                 </a>
             </div>
         <nav class="header-nav">
             <ul class="header_list">
                 <li class="header_item">
-                    <a href="index.html" class="header_link">Вход</a>
+                   <a href="{% url 'entry' %}" class="header_link">Вход</a> <!-- login -->
                 </li>
                 <li class="header_item">
-                    <a href="index.html" class="header_link"> Регистрация</a>
+                    <a href= "{% url 'reg' %}" class="header_link"> Регистрация</a>
                 </li>
                 <li class="header_item1">
                      <img src="{% static 'image/Decoration.svg' %}">
@@ -39,7 +39,7 @@
 <div class="wrapper" >
     <h1 class="content"> Совершенно новая <br> нейросеть для <br> определения<br> заинтерисованости</h1>
         <p class="content-p">Попробуйте сейчас бесплатно! </p>
-            <a href="index.html"">
+            <a href="{% url 'try' %}">
                 <img class="img-Rectangle " src="{% static 'image/rectangle.svg'%}">
             </a>
                 <p class="content-big">
@@ -190,21 +190,34 @@
              <div class="border-stages_of_creation">
                     <div class="bor">
                        <img class="num" src="{% static 'image/1.svg'%}">
+                        <div class="bor-stages_of_creation">
+                            <p class="bor-p">Аналитика</p>
+                        </div>
                     </div>
                     <div class="bor">
                         <img class="num" src="{% static 'image/2.svg'%}">
+                        <div class="bor-stages_of_creation">
+                            <p class="bor-p">Разработка</p>
+                        </div>
                     </div>
-
                     <div class="bor">
                         <img class="num" src="{% static 'image/3.svg'%}">
+                        <div class="bor-stages_of_creation">
+                            <p class="bor-p">Бета-Тест</p>
+                        </div>
                     </div>
-
                     <div  class="bor">
                         <img class="num" src="{% static 'image/4.svg'%}">
+                        <div class="bor-stages_of_creation">
+                            <p class="bor-p">Договор</p>
+                        </div>
                     </div>
                     <div  class="bor-">
                         <img class="gradint-bor" src="{% static 'image/gradient_bor.svg'%}">
                         <img class="num-grad" src="{% static 'image/5.svg'%}">
+                         <div class="bor-stages_of_creation-">
+                            <p class="borp">Запуск</p>
+                        </div>
                     </div>
              </div>
          </div>
@@ -267,12 +280,12 @@
                 </div>
             </div>
             <div class="logo-cyberx-grad">
-                <a href="index.html" class="logo-cyberx-grad-link">
+                <a href="{% url 'index'%}" class="logo-cyberx-grad-link">
                 <img src="{%static 'image/CyberXDown.svg'%}">
                 </a>
             </div>
             <div class="Privacy-Policy">
-                <a href="index.html" class="privacy-link">Политика конфеденциальности</a>
+                <a href="{% url 'Privacy_policy'%}" class="privacy-link">Политика конфеденциальности</a>
             </div>
         </div>
     </section>

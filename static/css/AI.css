@@ -1,0 +1,64 @@
+body {
+    overflow-x:hidden;
+    font-family: 'Unbounded', sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 10px; /* Ширина всего элемента навигации */
+}
+body::-webkit-scrollbar-track {
+  background:#eff0e4; /* Цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: black; /* Цвет бегунка */
+  border-radius: 70px;
+}
+.AI{
+    height:1200px;
+    background: #111 no-repeat center;
+    background-size:cover;
+}
+.wrapper {
+    width:1700px;
+    margin: 0 auto;
+}
+.neural_network{
+    position:relative;
+   text-align:center;
+   padding-top:73px;
+}
+.p-neural_network{
+    position:relative;
+    background: linear-gradient(65deg, #EAB5D1 51.59%, #EAC461 86.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.rectangle{
+    text-align:center;
+    margin-top:100px;
+}
+.cir{
+    margin-top:-640px;
+}
+.arrow{
+    position:relative;
+    top:-300px;
+}
+.load-video{
+    margin-top:-214px;
+}
+.p-load-video{
+    color: #FFF;
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
