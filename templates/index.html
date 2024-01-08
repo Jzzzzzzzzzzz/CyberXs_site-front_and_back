@@ -3,6 +3,7 @@
 {% block content %}
 </head>
 <body>
+
 <div class="container">
     <header class="header">
         <div class="wrapper">
@@ -12,8 +13,10 @@
                     <img src="{% static 'image/Cyber X UP.svg' %}" alt="CyberX" class="header_logo-pic">
                 </a>
             </div>
+        {% if not user.is_authenticated %}
         <nav class="header-nav">
             <ul class="header_list">
+
                 <li class="header_item">
                    <a href="{% url 'entry' %}" class="header_link">Вход</a> <!-- login -->
                 </li>
@@ -25,6 +28,21 @@
                 </li>
             </ul>
         </nav>
+        {% else %}
+        <nav class="header-nav">
+            <ul class="header_list">
+                <li class="header_item">
+                   <a href="{% url 'logout' %}" class="header_link"> Выход </a> <!-- logout -->
+                </li>
+                <li class="header_item">
+                    <a href= "{% url 'soc' %}" class="header_link"> Соц-сети </a>
+                </li>
+                <li class="header_item1">
+                     <img src="{% static 'image/Decoration.svg' %}">
+                </li>
+            </ul>
+        </nav>
+        {% endif %}
             </div>
         </div>
     </header>

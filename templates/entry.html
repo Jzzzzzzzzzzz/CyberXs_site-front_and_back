@@ -1,0 +1,19 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}entry{% endblock %}
+{%block content%}
+<form method="post"> {% csrf_token %}
+
+<div class="wrapper">
+    {{form}}
+<!--    <label for="exampleFormControlInput1" class="form-label">Email address</label>-->
+<!--    <input  name="username" type="text" class="form-control " placeholder="name@example.com"><br>-->
+<!--    <label for="exampleFormControlInput1" class="form-label">Password</label>-->
+<!--    <input name="password" type="text" class="form-control "  placeholder="pas"><br>-->
+    <button class="r-2" ><a class="r">Confirm identity</a></button>
+</div>
+
+</form>
+
+{%endblock%}>

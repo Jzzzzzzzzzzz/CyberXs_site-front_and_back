@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<body>
+
+<style>
+.class-soc{
+width: 1000px;
+margin-top:450px;
+margin-left:450px;
+border-radius: 70px;
+border: 10px solid  #FFF;
+}
+.soc-class-p{
+color: #FFF;
+font-family: Unbounded;
+font-size: 50px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+.container{
+    height:1200px;
+ background:black;
+}
+</style>
+<div class="container">
+    <div class="wrapper">
+    <div class="header_logo">
+        <a href="{% url 'index'%}" class="header_logo-link">
+            <img src="{% static 'image/Cyber X UP.svg' %}" alt="CyberX" class="header_logo-pic">
+        </a>
+    </div>
+    <div class="class-soc">
+        <p class="soc-class-p"> Telegram,Discord,Groups,Etc</p>
+    </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

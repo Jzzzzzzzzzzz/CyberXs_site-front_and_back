@@ -7,3 +7,7 @@ def trye(request):
 
 def Privacy_policy(request):
     return HttpResponse("Privacy Policy")
+
+def soc(request):
+    return render(request, "soc.html")
+

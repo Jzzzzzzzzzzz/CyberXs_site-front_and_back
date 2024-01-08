@@ -3,9 +3,20 @@
 {% load static %}
 {% block content %}
 <body>
+<style>
+    .header_logo{
+        height:100px;
+        }
+</style>
     <main class = "main">
         <section class="AI">
             <div class="wrapper">
+                 <div class="header_wrappe">
+                <div class="header_logo">
+                    <a href="{% url 'index'%}" class="header_logo-link">
+                        <img src="{% static 'image/Cyber X UP.svg' %}" alt="CyberX" class="header_logo-pic">
+                    </a>
+                </div>
                 <div class="neural_network">
                     <p class="p-neural_network">Нейросеть</p>
                 </div>
@@ -17,7 +28,7 @@
                         <img src="{% static 'image/circle.svg'%}">
                     </div>
                     <div class="arrow">
-                        <a href="/">
+                        <a href="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" fill="none">
                             <path d="M125 52.0833V197.917" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M197.917 125L125 197.917L52.0835 125" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -31,6 +42,7 @@
             </div>
         </section>
     </main>
+
 </body>
 {% endblock %}
 </html>
