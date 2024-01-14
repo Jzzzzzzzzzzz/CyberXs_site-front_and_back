@@ -1,0 +1,38 @@
+
+<link rel="stylesheet" href = "reg.css">
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body>
+<style>
+.input-class{
+    width:  200px;
+    height: 15px;
+    padding: 5px 10px 5px 10px;
+    border:1px solid #999;
+    font-size:16px;
+}
+</style>
+<main class="main-registration">
+    <section class="section-registration">
+        <div class="wrapper">
+            <form action="" method="post">
+                 {% csrf_token %}
+                <div class="login">
+                    <label for="id_username"> Имя пользователя </label>
+                    <input  class="input-class"  type="text" id="id_username" name="username">
+                </div>
+                 <div class="login">
+                    <label for="id_password">Пароль</label>
+                    <input  class="input-class"  type="text" id="id_password" name="password">
+                </div>
+                <div>
+                    <button>Нажать</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock %}
+</body>
+</html>

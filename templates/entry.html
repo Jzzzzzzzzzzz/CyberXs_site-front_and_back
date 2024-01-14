@@ -3,14 +3,34 @@
 {% load static %}
 {% block title %}entry{% endblock %}
 {%block content%}
+<link rel = "stylesheet" href="{% static 'css/css.css' %}">
+
 <form method="post"> {% csrf_token %}
 
 <div class="wrapper">
-    {{form}}
-<!--    <label for="exampleFormControlInput1" class="form-label">Email address</label>-->
-<!--    <input  name="username" type="text" class="form-control " placeholder="name@example.com"><br>-->
-<!--    <label for="exampleFormControlInput1" class="form-label">Password</label>-->
-<!--    <input name="password" type="text" class="form-control "  placeholder="pas"><br>-->
+    {% if form.non_field_errors %}
+        <p> {{form.non_field_errors}} </p>
+    {% endif %}
+       {% for item in form%}
+    <div style="margin-top:10px;">
+         <label for="{{ item.id_for_label }}" class="form-label">{{ item.label }}</label>
+        {{ item }}
+    </div>
+    {% endfor %}
+<!--    {% if form.non_field_errors %}-->
+<!--        <p> {{form.non_field_errors}} </p>-->
+<!--    {% endif %}-->
+<!--    <label for="id_username" class="form-label">Имя пользователя</label>-->
+<!--    <input  name="username" type="text" class="form-control" value="{% if form.username.value %} {{ form.username.value }} {% endif %}" id="id_username" placeholder="name@example.com"><br>-->
+<!--    <label for="id_password" class="form-label">Пароль</label>-->
+<!--    <input name="password" type="text" class="form-control" id="id_password"  placeholder="pas"><br>-->
+<!---->
+<!--    <label for="{{ form.username.id_for_label }}" class="form-label">Имя пользователя</label>-->
+<!--    {{ form.username }}-->
+<!--    <input  name="username" type="text" class="form-control " placeholder="name@example.com"><br>;-->
+<!--    <label for=" {{ form.password.id_for_label }}" class="form-label">Пароль</label>-->
+<!--    {{ form.password }}-->
+<!--    <input name="password" type="text" class="form-control "  placeholder="pas"><br>;-->
     <button class="r-2" ><a class="r">Confirm identity</a></button>
 </div>
 

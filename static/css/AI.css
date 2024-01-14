@@ -12,6 +12,16 @@ body::-webkit-scrollbar-thumb {
   background-color: black; /* Цвет бегунка */
   border-radius: 70px;
 }
+@media screen and (max-width:1800px){
+    .main{
+        width:1800px;
+        height:10000px;
+
+    }
+    .wrapper{
+        width:100%;
+    }
+}
 .AI{
     height:1200px;
     background: #111 no-repeat center;
@@ -22,9 +32,9 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
 }
 .neural_network{
-    position:relative;
+   position:relative;
    text-align:center;
-   padding-top:73px;
+   padding-top:21px;
 }
 .p-neural_network{
     position:relative;

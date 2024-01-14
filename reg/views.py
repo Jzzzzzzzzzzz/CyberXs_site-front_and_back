@@ -5,14 +5,14 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as django_login
 #import
-from .forms import UserLoginForm
+from .forms import UserLoginForm,UserRegistationForm
 
 
 
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegistationForm(request.POST)
         if form.is_valid():
             print("save")
             user=form.save()
@@ -24,7 +24,7 @@ def register(request):
             django_login(request,user)
             return redirect('/')
     else:
-        form = UserCreationForm()
+        form = UserRegistationForm()
         print("Error")
     return render(request, 'reg.html', {'form': form})
 

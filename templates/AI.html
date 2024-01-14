@@ -1,11 +1,16 @@
+
 {% extends 'base.html' %}
 {% block title %}AI{% endblock %}
 {% load static %}
 {% block content %}
+<link rel="stylesheet" href = "{% static 'css/AI.css' %}">
 <body>
 <style>
     .header_logo{
-        height:100px;
+       position:relative;
+        height:110px;
+        top:45px;
+        left:14px;
         }
 </style>
     <main class = "main">
@@ -42,7 +47,6 @@
             </div>
         </section>
     </main>
-
 </body>
 {% endblock %}
 </html>

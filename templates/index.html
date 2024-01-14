@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<link rel = "stylesheet" href="{% static 'css/css.css' %}">
 </head>
 <body>
-
 <div class="container">
     <header class="header">
         <div class="wrapper">
@@ -297,6 +297,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <footer class="footer-content">
+        <div class="wrapper">
             <div class="logo-cyberx-grad">
                 <a href="{% url 'index'%}" class="logo-cyberx-grad-link">
                 <img src="{%static 'image/CyberXDown.svg'%}">
@@ -306,7 +310,7 @@
                 <a href="{% url 'Privacy_policy'%}" class="privacy-link">Политика конфеденциальности</a>
             </div>
         </div>
-    </section>
+    </footer>
 </main>
 </div>
 </div>

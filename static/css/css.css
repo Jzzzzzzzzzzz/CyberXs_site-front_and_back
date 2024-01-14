@@ -12,6 +12,17 @@ body::-webkit-scrollbar-thumb {
   background-color: black; /* Цвет бегунка */
   border-radius: 70px;
 }
+@media screen and (max-width:1800px){
+    .container{
+        width:1800px;
+    }
+    .wrapper{
+        width:100%;
+    }
+}
+.main{
+    height:7777px;
+}
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #3498db; /* Blue */
@@ -107,7 +118,6 @@ html{
     border-radius: 0px 0px 70px 70px;
 }
 .container{
-    width: 100%;
     /* */
    /* background: #111;*/
 
@@ -786,6 +796,10 @@ html{
 .sty{
     margin-top:-45px;
     padding-left:414px;
+}
+.footer-content{
+    position:relative;
+    top:-307px;
 }
 .logo-cyberx-grad{
     margin-top:237px;
