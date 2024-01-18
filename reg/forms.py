@@ -10,8 +10,8 @@ class UserLoginForm(AuthenticationForm):
     username = forms.CharField(
         label="Имя",
         widget=forms.TextInput(attrs={"autofocus": True,
-                                                             "class": "form-control",
-                                                             "placeholder": "name@example.com", }))
+                                      "class": "form-control",
+                                      "placeholder": "name@example.com", }))
     password = forms.CharField(
         label="Пароль",
         widget=forms.PasswordInput(attrs={"autocomplete": "current-password",
@@ -22,9 +22,22 @@ class UserLoginForm(AuthenticationForm):
         model=User
         fields = ["username","password"]
 class UserRegistationForm(UserCreationForm):
-    username = forms.CharField()
-    password1 = forms.CharField()
-    password2 = forms.CharField()
+    username = forms.CharField(
+        label="Имя",
+        widget=forms.TextInput(attrs={"autofocus": True,
+                                      "class": "form-control",
+                                      "placeholder": "name@example.com",
+                                      }))
+    password1 = forms.CharField(
+        label="Пароль",
+        widget=forms.PasswordInput(attrs={"autocomplete": "current-password",
+                                          "class": "form-control",
+                                          "placeholder": "password",}))
+    password2 = forms.CharField(
+        label="Повторите пароль",
+        widget=forms.PasswordInput(attrs={"autocomplete": "current-password",
+                                          "class": "form-control",
+                                          "placeholder": "password"}))
     class Meta:
      model = User
      fields = (

@@ -18,15 +18,20 @@
         <div class="wrapper">
             <form action="" method="post">
                  {% csrf_token %}
+                {% if form.non_field_errors %}
+                <p> {{form.non_field_errors}} </p>
+                {% endif %}
+                 {% for item in form%}
                 <div class="login">
-                    <label for="id_username"> Имя пользователя </label>
-                    <input  class="input-class"  type="text" id="id_username" name="username">
+                    <label for="{{ item.id_for_label }}"> {{ item.label }} </label>
+                   {{ item }}
                 </div>
-                 <div class="login">
-                    <label for="id_password">Пароль</label>
-                    <input  class="input-class"  type="text" id="id_password" name="password">
-                </div>
-                <div>
+                {% endfor %}
+<!--                 <div class="login">-->
+<!--                    <label for="id_password">Пароль</label>-->
+<!--                    <input  class="input-class"  type="text" id="id_password" name="password">-->
+<!--                </div>-->
+<!--                <div>-->
                     <button>Нажать</button>
                 </div>
             </form>

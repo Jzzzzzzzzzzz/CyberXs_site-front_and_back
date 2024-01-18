@@ -26,7 +26,7 @@ def register(request):
     else:
         form = UserRegistationForm()
         print("Error")
-    return render(request, 'reg.html', {'form': form})
+    return render(request, 'registration.html', {'form': form})
 
 def logout_view(request):
     logout(request)
