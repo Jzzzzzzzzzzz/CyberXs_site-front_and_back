@@ -10,6 +10,7 @@ from .forms import UserLoginForm,UserRegistationForm
 
 
 
+
 def register(request):
     if request.method == 'POST':
         form = UserRegistationForm(request.POST)
@@ -26,7 +27,7 @@ def register(request):
     else:
         form = UserRegistationForm()
         print("Error")
-    return render(request, 'registration.html', {'form': form})
+    return render(request, 'auth_reg.html', {'form': form})
 
 def logout_view(request):
     logout(request)

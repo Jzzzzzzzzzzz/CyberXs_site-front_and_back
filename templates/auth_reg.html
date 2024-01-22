@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel = "stylesheet" href="{% static 'css/reg.css' %}">
+<body>
+    <div class="bg">
+        <div class="str1"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
+        <div class="str2"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
+        <div class="str3"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
+        <div class="str4"><img src="{% static 'image/star2.png' %}" alt="" style="width: 241px; height: 241px;"></div>
+        <form action="">
+          <div class="signin">
+            <div class="reg_bord"></div>
+            <button type="submit" class="reg_txt">Вход</button>
+            
+          </div>
+        
+          <div class="log_container">
+            <input class="inp" type="text"></input>
+            <div>
+              <div class="log_bord"></div>
+              <label for="name"><div class="log_txt">Логин</div></label>
+            </div>
+          </div>
+          <div class="pass_container">
+            <input class="inp" type="password"></input>
+            <div>
+              <div class="pass_bord"></div>
+              <label for="password"><div class="pass_txt">Пароль</div></label>
+            </div>
+          </div>
+          
+        </form>
+        <div class="circ1"></div>
+        <div class="circ2"></div>
+      </div>
+      
+</body>
+{% endblock %}
