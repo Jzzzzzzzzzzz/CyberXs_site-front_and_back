@@ -10,6 +10,7 @@ from .forms import UserLoginForm,UserRegistationForm
 
 
 
+
 def register(request):
     if request.method == 'POST':
         form = UserRegistationForm(request.POST)
