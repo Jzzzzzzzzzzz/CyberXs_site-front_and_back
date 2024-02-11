@@ -10,39 +10,41 @@ class UserLoginForm(AuthenticationForm):
     username = forms.CharField(
         label="Имя",
         widget=forms.TextInput(attrs={"autofocus": True,
-                                      "class": "form-control",
+                                      "class": "inp",
                                       "placeholder": "name@example.com", }))
     password = forms.CharField(
         label="Пароль",
         widget=forms.PasswordInput(attrs={"autocomplete": "current-password",
-                                          "class": "form-control",
+                                          "class": "inp",
                                           "placeholder": "pas", })
     )
     class Meta:
         model=User
         fields = ["username","password"]
+#  {{form.username}} {{form.username.id_for_label}}
 class UserRegistationForm(UserCreationForm):
+
     username = forms.CharField(
         label="Имя",
         widget=forms.TextInput(attrs={"autofocus": True,
-                                      "class": "form-control",
+                                      "class": "inp",
                                       "placeholder": "name@example.com",
                                       }))
     password1 = forms.CharField(
         label="Пароль",
         widget=forms.PasswordInput(attrs={"autocomplete": "current-password",
-                                          "class": "form-control",
+                                          "class": "inp",
                                           "placeholder": "password",}))
     password2 = forms.CharField(
-        label="Повторите пароль",
-        widget=forms.PasswordInput(attrs={"autocomplete": "current-password",
-                                          "class": "form-control",
-                                          "placeholder": "password"}))
+         label="Повторите пароль",
+         widget=forms.PasswordInput(attrs={"autocomplete": "current-password",
+                                           "class": "inp",
+                                           "placeholder": "password2"}))
     class Meta:
-     model = User
-     fields = (
-         "username","password1","password2"
-     )
+        model = User
+        fields = (
+            "username", "password1","password2"
+        )
 
 
 

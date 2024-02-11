@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel = "stylesheet" href="{% static 'css/reg-and-entry-login.css' %}">
+<body>
+<style>
+    .reg_txt:hover,.reg_txt:focus,.reg_txt:active{
+    opacity:.93;
+}
+    .header_logo{
+       position:relative;
+        height:110px;
+        top:54px;
+        left:27px;
+        }
+
+</style>
+<div class="container">
+     <div class="header_wrappe">
+                    <div class="header_logo">
+                        <a href="{% url 'index'%}" class="header_logo-link">
+                            <img src="{% static 'image/Cyber X UP.svg' %}" alt="CyberX" class="header_logo-pic">
+                        </a>
+                    </div>
+     </div>
+    <div class="bg">
+        <div class="str1"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
+        <div class="str2"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
+        <div class="str3"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
+        <div class="str4"><img src="{% static 'image/star2.png' %}" alt="" style="width: 241px; height: 241px;"></div>
+        <form action="" method = "post">
+          {% csrf_token %}
+          <div class="signin">
+            <div class="reg_bord"></div>
+            <button type="submit" class="reg_txt" >Регистрация</button>
+          </div>
+    </div>
+          <div class="log_container">
+           {{form.username}}
+              <div class="log_bord"></div>
+              <label for="{{form.username.id_for_label}}"><div class="log_txt">Логин</div></label>
+            </div>
+          <div class="pass_container">
+            {{form.password1}}
+              <div class="pass_bord"></div>
+              <label for="{{form.password1.id_for_label}}"><div class="pass_txt">Пароль</div></label>
+            </div>
+           <div class="pass_container_repeat" style = "position:relative;top:-640px;left:670px;">
+            {{form.password2}}
+              <div class="pass_bord"></div>
+              <label for="{{form.password2.id_for_label}}"><div class="pass_txt_repeatpassword">Повторите пароль</div></label>
+            </div>
+          </div>
+        </form>
+        <div class="circ1"></div>
+        <div class="circ2"></div>
+
+
+</div>
+</body>
+{% endblock %}

@@ -24,9 +24,10 @@ def register(request):
             django_login(request,user)
             return redirect('/')
     else:
+        print("hey")
         form = UserRegistationForm()
         print("Error")
-    return render(request, 'registration.html', {'form': form})
+    return render(request, 'auth_reg.html', {'form': form})
 
 def logout_view(request):
     logout(request)
@@ -40,6 +41,7 @@ def entry(request):
             username = request.POST["username"]
             password = request.POST["password"]
             user = authenticate(username=username,password=password)
+            print(f"username:{username},password:{password}")
             if user:
                 django_login(request,user)
                 return redirect(redirect_url)
@@ -65,6 +67,6 @@ def entry(request):
     context = {
         "form": form
     }
-    return render(request,"entry.html",context)
+    return render(request,"entry-login.html",context)
 
 # Create your views here.
