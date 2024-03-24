@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<<<<<<< HEAD
 <link rel = "stylesheet" href="{% static 'css/reg-and-entry-login.css' %}">
 <body>
 <style>
@@ -24,18 +23,20 @@
                         </a>
                     </div>
      </div>
-=======
+
 <link rel = "stylesheet" href="{% static 'css/reg.css' %}">
-<body>
->>>>>>> e571bddeac3256c4a3c599089428ad3d0bd4b4eb
+
     <div class="bg">
         <div class="str1"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
         <div class="str2"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
         <div class="str3"><img src="{% static 'image/star.png' %}" alt="" style="width: 169px; height: 241px;"></div>
         <div class="str4"><img src="{% static 'image/star2.png' %}" alt="" style="width: 241px; height: 241px;"></div>
-<<<<<<< HEAD
-        <form action="" method = "post">
+        <form action="{% url 'reg' %}" method = "post">
+            {% if form.non_field_errors %}
+               <p>{{form.non_field_errors}}</p>
+         {% endif %}
           {% csrf_token %}
+
           <div class="signin">
             <div class="reg_bord"></div>
             <button type="submit" class="reg_txt" >Регистрация</button>
@@ -43,54 +44,45 @@
     </div>
           <div class="log_container">
            {{form.username}}
+          {% if form.username.errors %}
+            <ul>
+                {% for error in form.username.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
               <div class="log_bord"></div>
               <label for="{{form.username.id_for_label}}"><div class="log_txt">Логин</div></label>
             </div>
           <div class="pass_container">
             {{form.password1}}
+           {% if form.password1.errors %}
+            <ul>
+                {% for error in form.password1.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
               <div class="pass_bord"></div>
               <label for="{{form.password1.id_for_label}}"><div class="pass_txt">Пароль</div></label>
             </div>
            <div class="pass_container_repeat" style = "position:relative;top:-640px;left:670px;">
             {{form.password2}}
+          {% if form.password2.errors %}
+        <ul style="position:relative;top:180px;font-size:45px;">
+            {% for error in form.password2.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
               <div class="pass_bord"></div>
               <label for="{{form.password2.id_for_label}}"><div class="pass_txt_repeatpassword">Повторите пароль</div></label>
             </div>
-          </div>
+        </div>
         </form>
         <div class="circ1"></div>
         <div class="circ2"></div>
 
 
 </div>
-=======
-        <form action="">
-          <div class="signin">
-            <div class="reg_bord"></div>
-            <button type="submit" class="reg_txt">Вход</button>
-            
-          </div>
-        
-          <div class="log_container">
-            <input class="inp" type="text"></input>
-            <div>
-              <div class="log_bord"></div>
-              <label for="name"><div class="log_txt">Логин</div></label>
-            </div>
-          </div>
-          <div class="pass_container">
-            <input class="inp" type="password"></input>
-            <div>
-              <div class="pass_bord"></div>
-              <label for="password"><div class="pass_txt">Пароль</div></label>
-            </div>
-          </div>
-          
-        </form>
-        <div class="circ1"></div>
-        <div class="circ2"></div>
-      </div>
-      
->>>>>>> e571bddeac3256c4a3c599089428ad3d0bd4b4eb
-</body>
 {% endblock %}

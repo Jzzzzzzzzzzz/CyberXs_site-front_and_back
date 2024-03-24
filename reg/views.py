@@ -25,9 +25,10 @@ def register(request):
             django_login(request,user)
             return redirect('/')
     else:
-        print("hey")
         form = UserRegistationForm()
-        print("Error")
+        if form.non_field_errors:
+            print("hey")
+            print("Error")
     return render(request, 'auth_reg.html', {'form': form})
 
 def logout_view(request):
