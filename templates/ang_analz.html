@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Анализ вовлеченности{% endblock %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/ang.css' %}">
+<body>
+
+<style>
+    .header_logo{
+       position:relative;
+        height:110px;
+        top:45px;
+        left:14px;
+        }
+</style>
+    <main class="main">
+        <section class="AI">
+            <div class="wrapper">
+                <div class="header_wrappe">
+                    <div class="header_logo">
+                        <a href="{% url 'index'%}" class="header_logo-link">
+                            <img src="{% static 'image/Cyber X UP.svg' %}" alt="CyberX" class="header_logo-pic">
+                        </a>
+                    </div>
+                </div>
+                        <div class="plot-container">
+                            <h2>График вовлеченности</h2>
+                            <img src="{{ plot_url }}" alt="График вовлеченности" style="display: flex;
+    justify-content: center;
+    width: 67%; border-radius: 10px;">
+                        </div>
+
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <h3>Средняя вовлеченность</h3>
+                                <div class="progress-bar" style="background: linear-gradient(90deg, #EAB5D1 {{ metrics.engagement.average_percent }}%, #3F3F3F 0%);">
+                                    {{ metrics.engagement.average|floatformat:2 }} ({{ metrics.engagement.average_percent|floatformat:0 }}%)
+                                </div>
+                            </div>
+
+                            <div class="metric-card">
+                                <h3>Закрытые глаза</h3>
+                                <div class="progress-bar" style="background: linear-gradient(90deg, #EAC461 {{ metrics.eyes_closed.percent }}%, #3F3F3F 0%);">
+                                    {{ metrics.eyes_closed.percent|floatformat:1 }}%
+                                </div>
+                                <p>{{ metrics.eyes_closed.count }} кадров</p>
+                            </div>
+
+                            <div class="metric-card">
+                                <h3>Отвлечение внимания</h3>
+                                <div class="progress-bar" style="background: linear-gradient(90deg, #7DCEA0 {{ metrics.head_distracted.percent }}%, #3F3F3F 0%);">
+                                    {{ metrics.head_distracted.percent|floatformat:1 }}%
+                                </div>
+                                <p>{{ metrics.head_distracted.count }} кадров</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+{% endblock %}

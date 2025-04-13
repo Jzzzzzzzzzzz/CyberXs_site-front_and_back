@@ -1,0 +1,211 @@
+/* Основные стили */
+.engagement-analysis {
+    font-family: 'Unbounded', sans-serif;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Заголовок страницы */
+.engagement-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.engagement-title {
+    background: linear-gradient(65deg, #EAB5D1 51.59%, #EAC461 86.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Контейнеры медиа */
+.media-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.video-wrapper, .plot-wrapper {
+    background: rgba(63, 63, 63, 0.7);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper video {
+    width: 100%;
+    border-radius: 10px;
+    background: #000;
+}
+
+.plot-wrapper img {
+    border: 1px solid #555;
+}
+
+/* Метрики */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.metric-card {
+    background: rgba(63, 63, 63, 0.7);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.metric-title {
+    background: linear-gradient(65deg, #EAB5D1 51.59%, #EAC461 86.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 40px;
+    border-radius: 20px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+.progress-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* Специфичные цвета прогресс-баров */
+.engagement-progress .progress-fill {
+    background: linear-gradient(90deg, #EAB5D1, #EAC461);
+}
+
+.eyes-progress .progress-fill {
+    background: linear-gradient(90deg, #EAC461, #F39C12);
+}
+
+.distraction-progress .progress-fill {
+    background: linear-gradient(90deg, #7DCEA0, #3498db);
+}
+
+/* Дополнительная информация */
+.metric-details {
+    margin-top: 15px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.timestamp {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .engagement-title {
+        font-size: 36px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .media-container {
+        gap: 20px;
+    }
+
+    .video-wrapper, .plot-wrapper {
+        padding: 15px;
+    }
+}
+
+
+
+.AI{
+    background: #111 no-repeat center;
+    background-size:cover;
+}
+.wrapper {
+    width:1700px;
+    margin: 0 auto;
+}
+.neural_network{
+   position:relative;
+   text-align:center;
+   padding-top:21px;
+}
+.p-neural_network{
+    position:relative;
+    background: linear-gradient(65deg, #EAB5D1 51.59%, #EAC461 86.71%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.rectangle{
+    text-align:center;
+    margin-top:100px;
+}
+.cir{
+    margin-top:-640px;
+}
+.arrow{
+    position:relative;
+    top:-300px;
+}
+.load-video{
+    margin-top:-214px;
+}
+.p-load-video{
+    color: #FFF;
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
